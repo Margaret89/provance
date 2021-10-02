@@ -1,0 +1,150 @@
+.header{
+	font-family: $font-sans;
+	margin: 28px 0 70px;
+	overflow: hidden;
+
+	&__content{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 1600px;
+		margin: 0 auto;
+	}
+
+	&__info{
+		display: flex;
+		align-items: center;
+		position: relative;
+		background: $color-purple url(../img/door.png) no-repeat calc(100% - 20px) bottom;
+		padding: 15px 80px 20px 0;
+		color: #fff;
+		margin-right: 20px;
+	}
+
+	&__info::before{
+		content: '';
+		display: block;
+		width: 1500px;
+		height: 100%;
+		background: $color-purple;
+		position: absolute;
+		top: 0;
+		right: 100%;
+	}
+
+	&__info::after{
+		content: '';
+		display: block;
+		width: calc(100% + 1500px);
+		height: 8px;
+		background: $color-orange;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__logo{
+		max-width: 240px;
+		margin-right: 40px;
+	}
+
+	&__slogan{
+		max-width: 206px;
+		@include font(normal, 300, 1.45rem, 1.2, #fff);
+		margin-right: 10px;
+	}
+
+	&__contacts-wrap{
+		display: flex;
+		align-items: center;
+
+		.btn{white-space: nowrap;}
+	}
+
+	&__contacts{
+		margin-right: 26px;
+		text-align: right;
+	}
+
+	&__mail{
+		@include font(normal, 300, 1.45rem, 1.2, $color-purple);
+		margin-bottom: 5px;
+
+		a{
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-orange;}
+	}
+
+	&__tel{
+		display: flex;
+		justify-content: flex-end;
+		@include font(normal, bold, 2.4rem, 1.2, $color-purple);
+		white-space: nowrap;
+
+		a{
+			text-decoration: none;
+			transition: color 0.2s ease 0s;
+		}
+
+		a:hover{color: $color-orange;}
+	}
+}
+
+.msg{
+	display: inline-flex;
+	align-items: center;
+	flex-shrink: 0;
+
+	&__item{
+		flex-shrink: 0;
+		margin-right: 10px;
+		text-decoration: none;
+		transition: opacity 0.2s ease 0s;
+	}
+
+	&__item:hover{opacity: 0.6;}
+
+	.ic-telegram{fill: #238fd4;}
+	.ic-whatchapp{fill: #23a30e;}
+
+	&_white .icon{fill: #fff;}
+
+	&_white &__item{margin: 12px;}
+}
+
+.header-advant{
+	display: flex;
+	align-items: center;
+	@include font(normal, 300, 1.75rem, 1.2, #fff);
+
+	&__item{
+		padding: 0 20px;
+		position: relative;
+		white-space: nowrap;
+	}
+
+	&__item::after{
+		content: '';
+		display: inline-block;
+		width: 1px;
+		height: 42px;
+		background: #fff;
+		position: absolute;
+		left: 0;
+		@include top-center;
+	}
+}
+
+.header-quality{
+	text-align: center;
+
+	&__img img{width: 48px;}
+
+	&__text{
+		@include font(normal, normal, 1.2rem, 1.2, #fff);
+		margin-top: 5px;
+	}
+}

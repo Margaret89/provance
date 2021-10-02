@@ -1,0 +1,100 @@
+// Franklin Gothic
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Regular.eot');
+	src: local('Franklin Gothic Book Regular'), local('Franklin_Gothic_Book_Regular'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Regular.woff') format('woff'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Italic.eot');
+	src: local('Franklin Gothic Book Italic'), local('Franklin_Gothic_Book_Italic'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Italic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Italic.woff') format('woff'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Book_Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Regular.eot');
+	src: local('Franklin Gothic Demi Regular'), local('Franklin_Gothic_Demi_Regular'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Regular.woff') format('woff'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Regular.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Italic.eot');
+	src: local('Franklin Gothic Demi Italic'), local('Franklin_Gothic_Demi_Italic'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Italic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Italic.woff') format('woff'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Demi_Italic.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Regular.eot');
+	src: local('Franklin Gothic Heavy Regular'), local('Franklin_Gothic_Heavy_Regular'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Regular.woff') format('woff'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Regular.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Franklin Gothic';
+	src: url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Italic.eot');
+	src: local('Franklin Gothic Heavy Italic'), local('Franklin_Gothic_Heavy_Italic'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Italic.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Italic.woff') format('woff'),
+		url('#{$path-fonts}/Franklin-Gothic/Franklin_Gothic_Heavy_Italic.ttf') format('truetype');
+	font-weight: 900;
+	font-style: italic;
+}
+
+// Open Sans
+@font-face {
+	font-family: 'Open Sans';
+	src: url('#{$path-fonts}/OpenSans/OpenSans-Light.eot');
+	src: local('Open Sans Light'), local('OpenSans-Light'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Light.woff') format('woff'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('#{$path-fonts}/OpenSans/OpenSans-Bold.eot');
+	src: local('Open Sans Bold'), local('OpenSans-Bold'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Bold.woff') format('woff'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('#{$path-fonts}/OpenSans/OpenSans-Regular.eot');
+	src: local('Open Sans Regular'), local('OpenSans-Regular'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Regular.woff') format('woff'),
+		url('#{$path-fonts}/OpenSans/OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

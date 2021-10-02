@@ -1,0 +1,36 @@
+header.header
+	.header__content
+		.header__info
+			.header__logo
+				img(src="assets/img/logo.png", alt="")
+
+			.header__slogan Дизайнерские двери любой конструкции и сложности готовые и под заказ
+
+			.header-advant
+				.header-advant__item 7 салонов
+				.header-advant__item Своё производство
+				.header-advant__item
+					.header-quality
+						.header-quality__img
+							img(src="assets/img/italy-flag.svg", alt="")
+
+						.header-quality__text Итальянское
+							br
+							|качество
+
+		.header__contacts-wrap
+			.header__contacts
+				.header__mail
+					a(href="mailto:design@dveri-provance.ru") design@dveri-provance.ru
+
+				.header__tel
+					.msg
+						a(href="#").msg__item
+							+svg('ic-telegram','ic-telegram', '26', '22')
+
+						a(href="#").msg__item
+							+svg('ic-whatchapp','ic-whatchapp', '30', '30')
+
+					a(href="tel:+74998771479") +7 (499) 877-14-79
+
+			a.btn.btn_small(href='#') Перезвоните мне
