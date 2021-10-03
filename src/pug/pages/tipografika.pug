@@ -2,20 +2,11 @@ extends ../layout/main
 
 block variables
 	- var title = 'Типографика';
-	- var h1 = 'Типографика';
-
-
-block breadcrumb
-	-
-		var breadcrumbs=[
-			{href:'/',name:'Главная'},
-			{href:'#',name:'Типографика'},
-		];
-
-	+breadcrumbs(breadcrumbs)
 
 block content
 	section.st-width
+		h1 Типографика
+
 		p
 			a(href='#') Это стандартная ссылка
 
@@ -62,6 +53,22 @@ block content
 		br
 		br
 		a.btn.btn_small(href='#') Кнопка
+		br
+		br
+		.btn-arr
+			.btn-arr__content
+				a.btn.btn_border(href='#') Обсудить ваш проект
+				.btn-arr__arr
+			.btn-arr__label По настоящему персональный менеджер
+
+		br
+		br
+		div(style="background: #ff540b; padding: 20px")
+			.btn-arr.btn-arr_white
+				.btn-arr__content
+					a.btn.btn_border(href='#') Обсудить ваш проект
+					.btn-arr__arr
+				.btn-arr__label По настоящему персональный менеджер
 
 		br
 		br

@@ -1,0 +1,58 @@
+/*-------------- services -----------------*/
+.services{
+	.header-site{margin-bottom: 107px;}
+	.btn-arr{margin-top: -75px;}
+}
+
+.services-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	&__item{
+		width: 33.33%;
+		padding: 15px;
+		text-align: center;
+		position: relative;
+		margin-bottom: 30px;
+	}
+
+	&__item::after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: 3px;
+		height: 160px;
+		background: #dedbe6;
+		position: absolute;
+		top: 40px;
+		right: 0;
+	}
+
+	&__item:nth-child(3n)::after{display: none;}
+
+	&__icon{
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 240px;
+		height: 240px;
+		border-radius: 50%;
+		border: 2px solid $color-purple;
+		box-shadow: inset 0px 0px 0px 10px rgba(222,219,230,1);
+		margin-bottom: 20px;
+	}
+
+	&__title{
+		max-width: 270px;
+		@include font(normal, 900, 2.2rem, 1.14, $color-purple);
+		text-transform: uppercase;
+		margin: 0 auto;
+	}
+
+	&__text{
+		@include font(normal, normal, 1.8rem, 1.1, $color-text);
+		margin-top: 15px;
+	}
+}

@@ -4,9 +4,92 @@ block variables
 	- var title = 'Главная';
 
 block content
-	section
-		.container
-			.row
-				.col-12
-					h1 содержание
-					
+	section.advant
+		.advant__content
+			.advant-list.advant-list_right
+				.advant-list__item
+					.advant-list__text Скидочная гибкость до&nbsp;25%
+					.advant-list__img
+						img(src="assets/img/sale.png", alt="")
+
+				.advant-list__item
+					.advant-list__text Прямое взаимодействие с&nbsp;технологом
+					.advant-list__img
+						img(src="assets/img/person.png", alt="")
+
+			.advant__main
+				.advant__title дизайнерские двери на ваш вкус
+				.advant__subtitle создавайте ценность выше стоимости
+				.advant__label 1000 нестандартных дверей каждый месяц
+
+			.advant-list
+				.advant-list__item
+					.advant-list__img
+						img(src="assets/img/certificate.png", alt="")
+					.advant-list__text Внимательно относимся к качеству
+
+				.advant-list__item
+					.advant-list__img
+						img(src="assets/img/hourglass.png", alt="")
+					.advant-list__text Педантично выдерживаем сроки
+
+	section.projects
+		.projects-list
+			-
+				var list=[
+					{img:'project1.jpg'},
+					{img:'project2.jpg'},
+					{img:'project3.jpg'},
+				]
+			each item in list
+				a(href="assets/img/"+item.img, data-fancybox='projects').projects-list__item
+					span.projects-list__img(style="background-image: url(assets/img/"+item.img+")")
+
+		.btn-arr.btn-arr_white
+			.btn-arr__content
+				a.btn.btn_border.btn_white(href='#') Обсудить ваш проект
+				.btn-arr__arr
+
+
+	section.about
+		.st-width
+			.header-site
+				.header-site__label Технологи фабрики Прованс
+				.header-site__title в поисках новых решений
+
+			.about__content.clearfix
+				img(src="assets/img/about.jpg", alt="").img-right
+				p Технологи фабрики Прованс постоянно находятся в поисках новых решений. Регулярно посещают Итальянские выставки, делятся технологиями и обучаются за рубежом. В настоящий момент ряд Итальянских дизайнерских бюро предпочли заказывать двери на фабрике Прованс, оценив качество производства и сравнительно не большую стоимость.
+
+	section.services
+		.st-width
+			.header-site
+				.header-site__label Узнайте, почему
+				.header-site__title дизайнеры любят с нами работать
+
+			.services-list
+				-
+					var list=[
+						{img:'lamp.png', title:'Готовы на эксперименты', text:'Присылаете запрос с требованиями к проекту — уточняем детали. Продумаваем реализацию. В течение суток бесплатно получаете чертеж в пропорциях.'},
+						{img:'man.png', title:'Работа напрямю с технологом', text:'Этим гарантируется точность исполнения дизайна.'},
+						{img:'msg.png', title:'тактичность в общении с клиентом', text:'В наших магазинах продавцы покажут именно то, что вы просите. Они понимают, что вы уже проделали работу с клиентом и готовы во всем вам помогать.'},
+						{img:'design.png', title:'фото и текстуры для прорисовки проектов', text:'Предоставляем 4000+ отрисованных моделей на белом фоне, а также необходимые текстуры для визуализации интерьера.'},
+						{img:'handshake.png', title:'поддержка и забота', text:'Мы с вами не только в радости, но и в редких случаях форс-мажора. Делаем так, чтобы клиент не почувствовал дискомфорт. Участвуем в решении проблем.'},
+						{img:'money.png', title:'гарантия вознаграждения и защита проекта', text:'Заключаем договор с четко прописанной премиальной системой. Наличие СРМ программы позволяет отслеживать заказы по магазинам.'},
+						{img:'cup.png', title:'удобная локация наших магазинов', text:'Понятное место встречи, где за один визит можно подобрать ассортимент для всего интерьера, а также есть зона для работы с клиентом в отдельно стоящем магазине.'},
+						{img:'brochure.png', title:'Персональный подход', text:'Наш менеджер может приехать к вам и показать все наши образцы. Вы сможете посмотреть, как тот или иной цвет будет выглядеть с вашим освещением и как он будет сочетаться с вашей мебелью, полом и стенами.'},
+						{img:'timer.png', title:'педантично выдерживаем сроки поставки', text:'Ваша репутация не пострадает. Вы и ваш клиент будете спокойны.'},
+					]
+				each item in list
+					.services-list__item
+						.services-list__icon
+							img(src="assets/img/"+item.img, alt="")
+
+						.services-list__title= item.title
+						.services-list__text= item.text
+
+			.btn-arr
+				.btn-arr__content
+					a.btn.btn_border(href='#') условия сотрудничества
+					.btn-arr__arr
+				.btn-arr__label По настоящему персональный менеджер
