@@ -27,7 +27,7 @@ a:hover{text-decoration: none;}
 
 p{
 	padding: 0;
-	margin-bottom: 2rem;
+	margin-bottom: 2.6rem;
 }
 
 h1,.h1,
@@ -244,5 +244,12 @@ button.btn_small{
 	&__label{
 		font-size: 4rem;
 		font-weight: normal;
+	}
+
+	&__note{
+		font-size: 4rem;
+		font-weight: normal;
+		text-transform: none;
+		margin-top: 5px;
 	}
 }

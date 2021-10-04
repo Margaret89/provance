@@ -1,0 +1,50 @@
+/*-------------- about -----------------*/
+.works{
+	padding: 105px 0 40px;
+	position: relative;
+	overflow: hidden;
+
+	&::before{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: 2452px;
+		height: 939px;
+		background: rgba(196, 196, 196, 0.2);
+		position: absolute;
+		top: -400px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 1226px/470px;;
+	}
+
+	.st-width{position: relative;}
+
+	&__video{
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+	}
+
+	&__video::after{
+		content: '';
+		display: block;
+		width: 72%;
+		height: 80%;
+		background: #000;
+		opacity: 0.6;
+		position: absolute;
+		top: 8%;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: opacity 0.2s ease 0s;
+	}
+
+	&__video:hover::after{opacity: 0;}
+
+	&__label{
+		@include font(normal, normal, 2.4rem, 1.13, $color-text);
+		text-align: center;
+		margin-top: 20px;
+	}
+}

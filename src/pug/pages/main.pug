@@ -50,7 +50,6 @@ block content
 				a.btn.btn_border.btn_white(href='#') Обсудить ваш проект
 				.btn-arr__arr
 
-
 	section.about
 		.st-width
 			.header-site
@@ -93,3 +92,138 @@ block content
 					a.btn.btn_border(href='#') условия сотрудничества
 					.btn-arr__arr
 				.btn-arr__label По настоящему персональный менеджер
+
+
+	section.gallery
+		.st-width
+			.header-site
+				.header-site__label Галлерея наших и ваших работ
+				.header-site__title От вашей идеи до ее воплощения — один&nbsp;шаг
+
+		.gallery-slider.js-gallery-slider
+			.gallery-slider__item
+				a(href="door1.jpg", data-fancybox='doors', style="background-image: url(assets/img/door1.jpg)").gallery-slider__link
+			
+			.gallery-slider__item.gallery-slider__item_half
+				a(href="door2.jpg", data-fancybox='doors', style="background-image: url(assets/img/door2.jpg)").gallery-slider__link
+				a(href="door3.jpg", data-fancybox='doors', style="background-image: url(assets/img/door3.jpg)").gallery-slider__link
+
+			.gallery-slider__item
+				a(href="door4.jpg", data-fancybox='doors', style="background-image: url(assets/img/door4.jpg)").gallery-slider__link
+
+			.gallery-slider__item.gallery-slider__item_half
+				a(href="door5.jpg", data-fancybox='doors', style="background-image: url(assets/img/door5.jpg)").gallery-slider__link
+				a(href="door6.jpg", data-fancybox='doors', style="background-image: url(assets/img/door6.jpg)").gallery-slider__link
+
+			.gallery-slider__item
+				a(href="door7.jpg", data-fancybox='doors', style="background-image: url(assets/img/door7.jpg)").gallery-slider__link
+				
+			.gallery-slider__item
+				a(href="door1.jpg", data-fancybox='doors', style="background-image: url(assets/img/door1.jpg)").gallery-slider__link
+			
+			.gallery-slider__item.gallery-slider__item_half
+				a(href="door2.jpg", data-fancybox='doors', style="background-image: url(assets/img/door2.jpg)").gallery-slider__link
+				a(href="door3.jpg", data-fancybox='doors', style="background-image: url(assets/img/door3.jpg)").gallery-slider__link
+
+			.gallery-slider__item
+				a(href="door4.jpg", data-fancybox='doors', style="background-image: url(assets/img/door4.jpg)").gallery-slider__link
+
+			.gallery-slider__item.gallery-slider__item_half
+				a(href="door5.jpg", data-fancybox='doors', style="background-image: url(assets/img/door5.jpg)").gallery-slider__link
+				a(href="door6.jpg", data-fancybox='doors', style="background-image: url(assets/img/door6.jpg)").gallery-slider__link
+
+
+		.gallery-slider-dots.js-gallery-slider-dots
+
+		.st-width
+			.gallery__text
+				p Многие модели создаются с вашей подачи. Это увлекательный процесс. Сначала вы присылаете свои идеи. Затем наши конструкторы думают, как это можно воплотить в жизнь.
+
+				p Так появляются красивые и интересные двери.
+
+			.btn-arr
+				.btn-arr__content
+					a.btn.btn_border(href='#') Обсудить ваши идеи
+					.btn-arr__arr
+				.btn-arr__label Создайте свой неповторимый стиль помещения
+
+	section.reviews
+		.st-width
+			.header-site
+				.header-site__label посмотрите
+				.header-site__title отзывы ваших коллег
+
+			.reviews-list
+				a(data-fancybox='', href='https://www.youtube.com/watch?v=dl16e_mG6hg&t=1s').reviews-list__item
+					img(src="assets/img/review1.png", alt="")
+
+				a(data-fancybox='', href='https://www.youtube.com/watch?v=JC6KnTvB50Y').reviews-list__item
+					img(src="assets/img/review2.png", alt="")
+
+			.guarantee
+				.guarantee__top
+					.guarantee__sticker.guarantee__sticker_left Добиваемся идеально ровной поверхности
+
+					.guarantee__header
+						.guarantee__label 36 месяцев гарантии с момента покупки
+						.guarantee__title наша формула качества
+
+					.guarantee__sticker.guarantee__sticker_right Не допускаем бугорков, неровностей, шероховатостей
+
+				.guarantee__content
+					.guarantee__item
+						.guarantee__icon
+							+svg('ic-tick','ic-tick', '44', '44')
+						.guarantee__text Строгий регламент производства
+
+					.guarantee__item
+						.guarantee__icon
+							+svg('ic-tick','ic-tick', '44', '44')
+						.guarantee__text Многоэтапный контроль
+
+					.guarantee__item
+						.guarantee__icon
+							+svg('ic-tick','ic-tick', '44', '44')
+						.guarantee__text Материалы премиум качества
+
+	section.works
+		.st-width
+			.header-site
+				.header-site__title Работаем так, чтобы вас рекомендовали
+				.header-site__note Делаем качественные двери, чтобы каждый ваш клиент был доволен результатом и рекомендовал вас своим знакомым
+
+			a(data-fancybox='', href='https://www.youtube.com/watch?v=SfW-Ll4xtX4').works__video
+				img(src="assets/img/laptop.png", alt="")
+
+			.works__label В производстве используем инструменты европейского качества. Фрезеровки на наших полотнах получаются идеально гладкими и ровными. Убедитесь сами
+
+	section.process
+		.st-width
+			.header-site
+				.header-site__title Строго выдерживаем технологический процесс покраски дверей
+
+			.process-list
+				-
+					var list=[
+						{title:'1 этап', img:'process1.jpg', text:'Полотно проходит через шлифовальное оборудование, а углы сглаживаются специальным станком'},
+						{title:'2 этап', img:'process2.jpg', text:'Полотно покрывается первым слоем грунта, после чего шлифуется и передается в «ОТК 1» —отдел технического контроля'},
+						{title:'3 этап', img:'process3.jpg', text:'Дверь покрывается вторым слоем грунта, шлифуется и после контроля качества получает печать «ОТК-2»'},
+						{title:'4 этап', img:'process4.jpg', text:'Дверь покрывается эмалью в плотно закрытом помещении. Строгий контроль за тем, чтобы в малярной камере в воздухе не летало пыли и мелкого мусора'},
+					]
+				each item in list
+					.process-list__item
+						.process-list__title= item.title
+						.process-list__img
+							img(src="assets/img/"+item.img, alt="")
+						.process-list__text= item.text
+
+			.process-res
+				.process-res__head
+					.process-res__title Результат — 
+					.process-res__subtitle гладкая дверь без шероховатостей или неровностей
+					
+				.process-res__list
+					.process-res__item
+						img(src="assets/img/process-res1.jpg", alt="")
+					.process-res__item
+						img(src="assets/img/process-res2.jpg", alt="")

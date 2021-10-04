@@ -1,0 +1,105 @@
+/*-------------- process -----------------*/
+.process{
+	background: url(../img/bg-process.png) no-repeat center bottom;
+	padding: 50px 0 70px;
+}
+
+.process-list{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-top: 116px;
+
+	&__item{
+		width: calc(25% - 30px);
+		margin: 15px;
+		position: relative;
+	}
+
+	&__title{
+		@include font(normal, 900, 3.6rem, 1.13, $color-purple);
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
+	&__img{
+		border: 4px solid #fff;
+		box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.25);
+	}
+
+	&__text{
+		@include font(normal, normal, 1.8rem, 1.1, $color-text);
+		margin-top: 12px;
+	}
+
+	&__item:nth-child(even){padding-top: 125px;}
+
+	&__item:nth-child(odd)::after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: 210px;
+		height: 131px;
+		background: url(../img/curve-arr-up.png) no-repeat center;
+		background-size: contain;
+		position: absolute;
+		top: -18px;
+		right: -150px;
+	}
+
+	&__item:nth-child(even)::after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: 220px;
+		height: 148px;
+		background: url(../img/curve-arr-down.png) no-repeat center;
+		background-size: contain;
+		position: absolute;
+		bottom: -23px;
+		right: -200px;
+	}
+
+	&__item:last-child::after,
+	&__item:nth-child(4n)::after{
+		display: none;
+	}
+}
+
+.process-res{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 55px;
+
+	&__head{
+		max-width: 307px;
+		@include font(normal, 900, 3rem, 1.13, $color-purple);
+		text-align: right;
+		margin-right: 50px;
+	}
+
+	&__title{
+		font-size: 3.6rem;
+		text-transform: uppercase;
+	}
+
+	&__list{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__item{
+		img{
+			max-width: 335px;
+			border: 4px solid #fff;
+			border-radius: 26px;
+		}
+	}
+
+	&__item:not(:last-child){margin-right: 40px;}
+}

@@ -3,6 +3,8 @@
 	background: url(../img/bg-doors.png) no-repeat center bottom;
 	padding-bottom: 160px;
 	margin: 70px 0 30px;
+	position: relative;
+	z-index: 1;
 
 	.btn-arr{margin-top: -10px;}
 }
