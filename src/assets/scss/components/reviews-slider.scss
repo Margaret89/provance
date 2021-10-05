@@ -1,2 +1,66 @@
 /*-------------- reviews-slider -----------------*/
-.reviews-slider{}
+.reviews-slider-wrap{
+	background: $color-orange;
+	padding: 45px 0 0;
+	color: #fff;
+
+	.header-site{
+		color: #fff;
+		text-align: left;
+		margin-bottom: 0;
+	}
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.reviews-slider{
+	display: none;
+	flex-shrink: 0;
+	width: 335px;
+	height: 729px;
+	background: url(../img/phone.png) no-repeat center;
+	background-size: contain;
+	margin: 0 80px -80px 80px;
+	padding: 166px 15px;
+
+	&.slick-initialized{display: block;}
+	.slick-track{display: flex!important;}
+	.slick-slide{height: auto;}
+
+	.slick-slide > div,
+	&__item{
+		height: 100%;
+	}
+
+	&__item{
+		display: flex!important;
+		align-items: center;
+		text-align: center;
+
+		img{max-height: 100%;}
+	}
+
+	.btn-slider,
+	button.btn-slider{
+		width: 80px;
+		height: 80px;
+		border: 0;
+		background: #fff;
+
+		.icon{fill: $color-orange;}
+		&_left{left: -100px;}
+		&_right{right: -100px;}
+	}
+
+	.slick-dots{
+		position: absolute;
+		bottom: 75px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+}

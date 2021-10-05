@@ -344,7 +344,7 @@ block content
 				.header-site__title наши партнеры
 				.header-site__label Лучше всего о нашем качестве и надежности могут рассказать наши партнеры
 
-			.partners-slider
+			.partners-slider.js-partners-slider
 				-
 					var list=[
 						{img:'partner1.png'},
@@ -370,7 +370,8 @@ block content
 					.partners-slider__item
 						img(src="assets/img/"+item.img, alt="")
 
-
+			.partners-slider-dots.js-partners-slider-dots
+			
 			.partners__note Для каждого Заказчика мы стараемся подобрать оптимальную схему взаимоотношений, одинаково внимательно относясь как к крупным клиентам, так и к небольшим заказам.
 	
 	section.people
@@ -404,7 +405,7 @@ block content
 					.person__img
 						img(src="assets/img/fazenda.png", alt="")
 
-				.person
+				.person.person_top
 					.person__content
 						.person__title Хромченко
 						.person__subtitle Эвелина Леонидовна
@@ -445,7 +446,9 @@ block content
 			.header-site
 				.header-site__title карта наших представителей и салонов
 
-			.map
+		#map.map
+		script(src='http://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
 
+		.st-width
 			.map-note Используйте карту для поиска ближайшего к вам нашего партнера. Все, что необходимо сделать – кликнуть на точку офиса на карте, нажать на кнопку «Отправить заявку», заполнить появившуюся форму. После этого с вами свяжутся для выяснения деталей.
 

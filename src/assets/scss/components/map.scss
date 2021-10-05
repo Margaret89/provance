@@ -1,2 +1,20 @@
 /*-------------- map -----------------*/
-.map{}
+.map-wrap{
+	margin-top: 100px;
+	background: url(../img/bg-map.png) no-repeat top;
+	padding: 70px 0 50px;
+
+	.header-site{margin-bottom: 8.5rem;}
+}
+
+.map-note{
+	@include font(normal, normal, 2.4rem, 1.125, $color-text);
+	margin-top: 35px;
+}
+
+.map{
+	width: 100%;
+	height: 600px;
+}
+
+.ymaps-2-1-79-ground-pane{filter: grayscale(1);}

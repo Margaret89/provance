@@ -1,2 +1,25 @@
 /*-------------- conditions -----------------*/
-.conditions{}
+.conditions{
+	background: url(../img/bg-purple.jpg) no-repeat top center;
+	padding-top: 73px;
+	margin-top: 63px;
+
+	.header-site{color: #fff;}
+
+	&__content{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__desc{padding-top: 74px;}
+
+	&__img{
+		width: 462px;
+		height: 462px;
+		border-radius: 50%;
+		border: 20px solid #fff;
+		overflow: hidden;
+
+		img{max-height: 100%;}
+	}
+}

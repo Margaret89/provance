@@ -1,2 +1,101 @@
 /*-------------- people -----------------*/
-.people{}
+.people{
+	padding: 160px 0 40px;
+	background: #fcfafb url(../img/bg-people.jpg) no-repeat top center;
+
+	.header-site{margin-bottom: 75px;}
+}
+
+.person{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	&__content,
+	&__img{
+		width: calc(50% - 24px);
+	}
+
+	&__content{
+		padding-top: 150px;
+		padding-bottom: 86px;
+		position: relative;
+		text-align: right;
+	}
+
+	&__content::after{
+		content: '';
+		display: inline-block;
+		vertical-align: top;
+		width: 188px;
+		height: 150px;
+		background: url(../img/person-arrow-top.png) no-repeat center;
+		background-size: contain;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&__title{
+		@include font(normal, 900, 2.4rem, 1.13, $color-purple);
+		text-transform: uppercase;
+	}
+	
+	&__subtitle{
+		@include font(normal, normal, 2.4rem, 1.13, $color-purple);
+	}
+
+	&__label{
+		@include font(normal, normal, 1.4rem, 1.13, $color-text);
+		margin-top: 5px;
+	}
+
+	&__text{
+		max-width: 400px;
+		margin-top: 16px;
+		margin-left: auto;
+		margin-right: 0;
+		@include font(normal, normal, 1.4rem, 1.13, $color-text);
+		p:last-child{margin-bottom: 0;}
+	}
+
+	&:nth-child(even){flex-direction: row-reverse;}
+
+	&:nth-child(even) &__content{
+		text-align: left;
+		padding-top: 0;
+		padding-bottom: 180px;
+	}
+
+	&:nth-child(even) &__content::after{
+		width: 174px;
+		height: 167px;
+		top: auto;
+		bottom: 0;
+		right: auto;
+		left: 0;
+		background-image: url(../img/person-arrow-down-left.png);
+	}
+
+	&:nth-child(even) &__text{
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	&_top &__content{
+		padding-top: 0;
+		padding-bottom: 185px;
+	}
+
+	&_top{align-items: flex-start;}
+
+	&_top &__content::after{
+		width: 181px;
+		height: 177px;
+		top: auto;
+		bottom: 0;
+		background-image: url(../img/person-arrow-down-right.png);
+	}
+
+	&:not(:last-child){margin-bottom: 30px;}
+}

@@ -1,2 +1,42 @@
 /*-------------- partners -----------------*/
-.partners{}
+.partners{
+	margin: 90px 0 100px;
+
+	.header-site{margin-bottom: 140px;}
+
+	&__note{
+		@include font(normal, normal, 2.4rem, 1.125, $color-text);
+		margin-top: 37px;
+	}
+}
+
+.partners-slider{
+	display: none;
+	&.slick-initialized{display: block;}
+
+	&__item{
+		display: block!important;
+		background: #fff;
+		padding-bottom: 100%;
+		position: relative;
+
+		img{
+			max-height: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.slick-slide:nth-child(even) > div:nth-child(1) &__item{background: #f5f5f5;}
+	.slick-slide:nth-child(odd) > div:nth-child(2) &__item{background: #f5f5f5;}
+
+	.btn-slider,
+	button.btn-slider{
+		&_right{right: -260px;}
+		&_left{left: -260px;}
+	}
+}
+
+.partners-slider-dots{margin: 30px 0;}
