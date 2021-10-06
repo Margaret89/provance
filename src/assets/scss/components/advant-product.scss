@@ -67,3 +67,35 @@
 		@include font(normal, normal, 2rem, 1.13, $color-purple);
 	}
 }
+
+@media (max-width: 1279px) {
+	
+	.advant-product{
+		&__img,
+		&__desc{
+			width: calc(50% - 30px);
+		}
+
+		&__text{font-size: 2rem;}
+		&__top::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+
+	.advant-product-list{display: block;}
+
+	.advant-product-item{
+		width: auto;
+		
+		&__title{
+			font-size: 3rem;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.advant-product{display: none;}
+}

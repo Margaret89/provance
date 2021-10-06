@@ -9,6 +9,7 @@
 	&__content{
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 	}
 
 	&__desc{padding-top: 74px;}
@@ -21,5 +22,36 @@
 		overflow: hidden;
 
 		img{max-height: 100%;}
+	}
+}
+
+@media (max-width: 1279px) {
+	.conditions{
+		&__img{
+			width: 280px;
+			height: 280px;
+			border-width: 10px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.conditions{
+		padding-top: 40px;
+		margin-top: 40px;
+		background-image: url(../img/bg-purple-mobile.jpg);
+		background-size: contain;
+
+		&__content{position: relative;}
+
+		&__img{
+			width: 118px;
+			height: 118px;
+			flex-shrink: 0;
+			border-width: 5px;
+			position: absolute;
+			top: -20px;
+			right: 0;
+		}
 	}
 }

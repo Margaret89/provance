@@ -43,6 +43,8 @@
 		border: 2px solid $color-purple;
 		box-shadow: inset 0px 0px 0px 10px rgba(222,219,230,1);
 		margin-bottom: 20px;
+
+		img{max-height: 100%;}
 	}
 
 	&__title{
@@ -55,5 +57,82 @@
 	&__text{
 		@include font(normal, normal, 1.8rem, 1.1, $color-text);
 		margin-top: 15px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.services{
+		.header-site{margin-bottom: 5rem;}
+	}
+
+	.services-list{
+		&__icon{
+			width: 160px;
+			height: 160px;
+
+			img{
+				max-width: 100px;
+				max-height: 100px;
+			}
+		}
+
+		&__item::after{height: 100px;}
+	}
+}
+
+@media (max-width: 767px) {
+	.services{
+		padding-top: 50px;
+		background: #fff;
+		.header-site{margin-bottom: 3rem;}
+		.btn-arr{margin-top: 30px;}
+	}
+
+	.services-list{
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+
+		&__item{
+			display: flex;
+			align-items: center;
+			width: auto;
+			text-align: left;
+			padding-left: 0;
+			padding-right: 0;
+			margin-bottom: 0;
+		}
+
+		&__item::after{
+			width: 100%;
+			height: 1px;
+			top: auto;
+			bottom: 0;
+			right: auto;
+			left: 0;
+		}
+
+		&__icon{
+			flex-shrink: 0;
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
+			box-shadow: inset 0 0 0 2px #dedbe6;
+			margin-bottom: 0;
+
+			img{
+				max-width: 35px;
+				max-height: 35px;
+			}
+		}
+
+		&__title{font-size: 2rem;}
+
+		&__text{
+			font-size: 1.6rem;
+			margin-top: 10px;
+		}
+
+		&__item:nth-child(3n)::after{display: block;}
 	}
 }

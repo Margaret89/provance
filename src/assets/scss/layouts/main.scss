@@ -75,6 +75,7 @@ h5,.h5{
 	width: 100%;
 	margin: 0 auto;
 	background: url(../img/bg-top.jpg) no-repeat top center;
+	overflow: hidden;
 }
 
 main{
@@ -107,6 +108,8 @@ button.btn{
 	padding: 0 50px;
 	cursor: pointer;
 	transition: box-shadow 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+	.icon{fill: #fff;}
 }
 
 .btn:hover,
@@ -250,5 +253,91 @@ button.btn_small{
 		font-weight: normal;
 		text-transform: none;
 		margin-top: 5px;
+	}
+}
+
+@media (max-width: 1279px) {
+	body{font-size: 2rem;}
+	.st-width{width: 760px;}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: 6rem;
+		border-radius: 3rem;
+		padding: 0 20px;
+		font-size: 2.4rem;
+	}
+
+	.btn_small,
+	input[type="submit"].btn_small,
+	button.btn_small{
+		height: 3.4rem;
+		border-radius: 1.7rem;
+		font-size: 1.4rem;
+	}
+
+	.btn-arr{
+		padding-top: 70px;
+
+		&__arr::after,
+		&__arr::before{
+			width: 120px;
+			height: 82px;
+		}
+
+		&__label{font-size: 1.8rem;}
+	}
+
+	.header-site{
+		font-size: 4rem;
+		&__label{font-size: 3rem;}
+		&__note{font-size: 2rem;}
+		&__title + &__label{margin-top: 5px;}
+	}
+
+	h1,.h1{font-size: 4.5rem;}
+	h2,.h2{font-size: 4rem;}
+	h3,.h3{font-size: 3rem;}
+	h4,.h4{font-size: 2.6rem;}
+	h5,.h5{font-size: 2rem;}
+}
+
+@media (max-width: 767px) {
+	body{font-size: 1.6rem;}
+	.st-width{width: 100%;}
+	.wrapper{background: #fff;}
+
+	.header-site{
+		font-size: 2.4rem;
+		margin-bottom: 3.5rem;
+		&__label{font-size: 1.8rem;}
+		&__note{font-size: 1.6rem;}
+	}
+
+	h1,.h1{font-size: 3.4rem;}
+	h2,.h2{font-size: 3rem;}
+	h3,.h3{font-size: 2rem;}
+	h4,.h4{font-size: 1.8rem;}
+	h5,.h5{font-size: 1.6rem;}
+
+	.btn,
+	input[type="submit"].btn,
+	button.btn{
+		height: 4rem;
+		border-radius: 2rem;
+		font-size: 1.4rem;
+		padding: 0 30px;
+	}
+
+	.btn-arr{
+		padding-top: 0;
+		margin-top: 20px;
+		&__arr{display: none;}
+
+		&__label{
+			font-size: 1.3rem;
+			margin-top: 5px;
+		}
 	}
 }

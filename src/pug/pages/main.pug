@@ -33,6 +33,8 @@ block content
 						img(src="assets/img/hourglass.png", alt="")
 					.advant-list__text Педантично выдерживаем сроки
 
+			.advant__label 1000 нестандартных дверей каждый месяц
+
 	section.projects
 		.projects-list
 			-
@@ -84,8 +86,9 @@ block content
 						.services-list__icon
 							img(src="assets/img/"+item.img, alt="")
 
-						.services-list__title= item.title
-						.services-list__text= item.text
+						.services-list__content
+							.services-list__title= item.title
+							.services-list__text= item.text
 
 			.btn-arr
 				.btn-arr__content
@@ -102,35 +105,35 @@ block content
 
 		.gallery-slider.js-gallery-slider
 			.gallery-slider__item
-				a(href="door1.jpg", data-fancybox='doors', style="background-image: url(assets/img/door1.jpg)").gallery-slider__link
+				a(href="assets/img/door1.jpg", data-fancybox='doors', style="background-image: url(assets/img/door1.jpg)").gallery-slider__link
 			
 			.gallery-slider__item.gallery-slider__item_half
-				a(href="door2.jpg", data-fancybox='doors', style="background-image: url(assets/img/door2.jpg)").gallery-slider__link
-				a(href="door3.jpg", data-fancybox='doors', style="background-image: url(assets/img/door3.jpg)").gallery-slider__link
+				a(href="assets/img/door2.jpg", data-fancybox='doors', style="background-image: url(assets/img/door2.jpg)").gallery-slider__link
+				a(href="assets/img/door3.jpg", data-fancybox='doors', style="background-image: url(assets/img/door3.jpg)").gallery-slider__link
 
 			.gallery-slider__item
-				a(href="door4.jpg", data-fancybox='doors', style="background-image: url(assets/img/door4.jpg)").gallery-slider__link
+				a(href="assets/img/door4.jpg", data-fancybox='doors', style="background-image: url(assets/img/door4.jpg)").gallery-slider__link
 
 			.gallery-slider__item.gallery-slider__item_half
-				a(href="door5.jpg", data-fancybox='doors', style="background-image: url(assets/img/door5.jpg)").gallery-slider__link
-				a(href="door6.jpg", data-fancybox='doors', style="background-image: url(assets/img/door6.jpg)").gallery-slider__link
+				a(href="assets/img/door5.jpg", data-fancybox='doors', style="background-image: url(assets/img/door5.jpg)").gallery-slider__link
+				a(href="assets/img/door6.jpg", data-fancybox='doors', style="background-image: url(assets/img/door6.jpg)").gallery-slider__link
 
 			.gallery-slider__item
-				a(href="door7.jpg", data-fancybox='doors', style="background-image: url(assets/img/door7.jpg)").gallery-slider__link
+				a(href="assets/img/door7.jpg", data-fancybox='doors', style="background-image: url(assets/img/door7.jpg)").gallery-slider__link
 				
 			.gallery-slider__item
-				a(href="door1.jpg", data-fancybox='doors', style="background-image: url(assets/img/door1.jpg)").gallery-slider__link
+				a(href="assets/img/door1.jpg", data-fancybox='doors', style="background-image: url(assets/img/door1.jpg)").gallery-slider__link
 			
 			.gallery-slider__item.gallery-slider__item_half
-				a(href="door2.jpg", data-fancybox='doors', style="background-image: url(assets/img/door2.jpg)").gallery-slider__link
-				a(href="door3.jpg", data-fancybox='doors', style="background-image: url(assets/img/door3.jpg)").gallery-slider__link
+				a(href="assets/img/door2.jpg", data-fancybox='doors', style="background-image: url(assets/img/door2.jpg)").gallery-slider__link
+				a(href="assets/img/door3.jpg", data-fancybox='doors', style="background-image: url(assets/img/door3.jpg)").gallery-slider__link
 
 			.gallery-slider__item
-				a(href="door4.jpg", data-fancybox='doors', style="background-image: url(assets/img/door4.jpg)").gallery-slider__link
+				a(href="assets/img/door4.jpg", data-fancybox='doors', style="background-image: url(assets/img/door4.jpg)").gallery-slider__link
 
 			.gallery-slider__item.gallery-slider__item_half
-				a(href="door5.jpg", data-fancybox='doors', style="background-image: url(assets/img/door5.jpg)").gallery-slider__link
-				a(href="door6.jpg", data-fancybox='doors', style="background-image: url(assets/img/door6.jpg)").gallery-slider__link
+				a(href="assets/img/door5.jpg", data-fancybox='doors', style="background-image: url(assets/img/door5.jpg)").gallery-slider__link
+				a(href="assets/img/door6.jpg", data-fancybox='doors', style="background-image: url(assets/img/door6.jpg)").gallery-slider__link
 
 
 		.gallery-slider-dots.js-gallery-slider-dots
@@ -380,7 +383,7 @@ block content
 				.header-site__title публичность требует качества
 				.header-site__label Проекты на телевидении и с известными людьми
 
-			.people-list
+			.people-list.js-people-list
 				.person
 					.person__content
 						.person__title Вилкова

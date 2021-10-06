@@ -16,7 +16,7 @@
 		text-align: center;
 		position: relative;
 		padding-top: 80px;
-		margin-bottom: 15px;
+		margin: 0 15px 15px;
 	}
 
 	&__item::after{
@@ -55,5 +55,58 @@
 	&__text{
 		@include font(normal, normal, 1.8rem, 1.1, $color-text);
 		margin-top: 30px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.steps-list{
+		&__count{
+			width: 160px;
+			height: 160px;
+			font-size: 3rem;
+		}
+
+		&__num{font-size: 6rem;}
+
+		&__item::after{
+			width: 180px;
+			height: 55px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.steps{margin-top: 40px;}
+
+	.steps-list{
+		&__item{
+			width: calc(50% - 30px);
+			padding-top: 0;
+			text-align: left;
+		}
+
+		&__item::after{display: none;}
+
+		&__count{
+			display: block;
+			width: auto;
+			height: auto;
+			background: transparent;
+			color: $color-orange;
+			font-size: 1.6rem;
+			text-align: left;
+		}
+
+		&__num{
+			display: inline;
+			font-size: 2.6rem;
+		}
+
+		&__label{display: inline;}
+
+		&__text{
+			font-size: 1.6rem;
+			margin-top: 5px;
+		}
 	}
 }

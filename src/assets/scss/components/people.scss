@@ -99,3 +99,51 @@
 
 	&:not(:last-child){margin-bottom: 30px;}
 }
+
+@media (max-width: 991px) {
+	.people{padding-top: 80px;}
+}
+
+@media (max-width: 767px) {
+	.people{
+		padding-top: 40px;
+		.header-site{margin-bottom: 4rem;}
+	}
+
+	.people-list{
+		display: none;
+
+		&.slick-initialized{display: block;}
+		.slick-track{display: flex!important;}
+		.slick-slide{height: auto;}
+
+		.slick-slide > div,
+		.person{
+			height: 100%;
+		}
+
+		.slick-dots{margin-top: 30px;}
+	}
+
+	.person{
+		display: flex!important;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		align-items: flex-start;
+
+		&__content,
+		&__img{
+			width: auto;
+		}
+
+		&__img{margin-bottom: 20px;}
+
+		&__content{
+			padding: 0;
+			text-align: left;
+		}
+
+		&__content::after{display: none;}
+		&_top &__content{padding-bottom: 0;}
+	}
+}

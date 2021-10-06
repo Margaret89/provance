@@ -58,3 +58,41 @@
 		line-height: 1.2;
 	}
 }
+
+@media (max-width: 1700px) {
+	.footer{
+		&__content{flex-wrap: wrap;}
+		&__logo{width: 170px;}
+
+		&__info-wrap{
+			width: 100%;
+			margin-left: 0;
+			margin-top: 20px;
+			text-align: left;
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	.footer{
+		&__content{flex-direction: column;}
+		&__contacts{margin: 20px 0 0;}
+		&__info-wrap{text-align: center;}
+		
+		&__logo{
+			margin: 0 0 20px;
+			order: -2;
+		}
+
+		.msg{order: -1;}
+	}
+}
+
+@media (max-width: 767px) {
+	.footer{
+		border-width: 6px;
+
+		&__title{font-size: 2rem;}
+		&__info{font-size: 1.6rem;}
+	}
+}

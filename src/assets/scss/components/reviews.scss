@@ -43,18 +43,6 @@
 		top: calc(100% - 90px);
 		right: 50%;
 	}
-
-	&__item:hover{transform: scale(1.05);}
-
-	&__item:hover::before{
-		top: calc(100% - 90px);
-		right: 50%;
-	}
-
-	&__item:nth-child(even):hover::before{
-		top: 80px;
-		right: 0;
-	}
 }
 
 .guarantee{
@@ -149,5 +137,93 @@
 
 	&__text{
 		@include font(normal, normal, 2.4rem, 1.125, #fff);
+	}
+}
+
+@media (max-width: 1279px) {
+	.guarantee{
+		&__top{margin-bottom: 30px;}
+		&__header{margin: 0 15px;}
+		&__title{font-size: 4rem;}
+		&__label{font-size: 2.4rem;}
+		&__text{font-size: 2rem;}
+		&__item{max-width: 170px;}
+		&__item:not(:last-child){margin-right: 80px;}
+		&__item:not(:last-child)::after{width: 70px;}
+
+		&__sticker,
+		&__sticker::before{
+			width: 150px;
+			height: 150px;
+		}
+
+		&__sticker{
+			flex-shrink: 0;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.reviews-list{
+		&__item:hover{transform: scale(1.05);}
+
+		&__item:hover::before{
+			top: calc(100% - 90px);
+			right: 50%;
+		}
+
+		&__item:nth-child(even):hover::before{
+			top: 80px;
+			right: 0;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.reviews-list{
+		display: block;
+
+		&__item{max-width: 100%;}
+		&__item:nth-child(2n){padding-top: 0;}
+	}
+
+	.guarantee{
+		margin-top: 40px;
+		&__sticker{display: none;}
+		&__label{font-size: 1.8rem;}
+		&__title{font-size: 2.4rem;}
+
+		&__content{
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+
+		&__item{
+			width: calc(33.33% - 20px);
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		&__item:not(:last-child){margin-right: 10px;}
+
+		&__item:not(:last-child)::after{
+			width: 40px;
+			bottom: auto;
+			top: 14px;
+			left: auto;
+			right: -30px;
+		}
+
+		&__icon{
+			margin-bottom: 10px;
+
+			.icon{
+				width: 28px;
+				height: 28px;
+			}
+		}
+
+		&__text{font-size: 1.4rem;}
 	}
 }

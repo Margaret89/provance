@@ -6,8 +6,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: 1500px;
+		width: 1530px;
+		max-width: 100%;
 		margin: 0 auto;
+		padding: 0 15px;
 	}
 
 	&__main{
@@ -27,9 +29,12 @@
 	}
 
 	&__label{
+		display: none;
 		@include font(normal, 600, 3.6rem, 1.03, $color-orange);
 		margin-top: 10px;
 	}
+
+	&__main &__label{display: block;}
 }
 
 .advant-list{
@@ -61,5 +66,77 @@
 	&_right &__img{
 		margin-right: 0;
 		margin-left: 23px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.advant{
+		&__content{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		&__main{
+			width: 100%;
+			order: -1;
+			margin-bottom: 30px;
+		}
+
+		&__title{font-size: 4rem;}
+		&__subtitle{font-size: 3rem;}
+		&__label{font-size: 2.6rem;}
+	}
+
+	.advant-list{
+		&__item{
+			margin-left: 15px;
+			margin-right: 15px;
+		}
+		
+		&_right &__item{flex-direction: row-reverse;}
+	}
+}
+
+@media (max-width: 767px) {
+	.advant{
+		background: #fff;
+		margin-bottom: 40px;
+
+		&__title{font-size: 2.4rem;}
+		&__subtitle{font-size: 1.8rem;}
+		&__main &__label{display: none;}
+		&__main{margin-bottom: 10px;}
+
+		&__label{
+			display: block;
+			font-size: 1.6rem;
+			text-align: center;
+		}
+	}
+
+	.advant-list{
+		display: flex;
+		justify-content: space-between;
+		width: auto;
+		margin-left: -10px;
+		margin-right: -10px;
+
+		&__item{
+			flex-direction: column;
+			width: calc(50% - 20px);
+			margin: 10px;
+			text-align: center;
+		}
+
+		&__item:not(:last-child){margin-bottom: 10px;}
+
+		&__img{
+			margin: 0 0 10px;
+			img{max-height: 48px;}
+		}
+
+		&_right &__item{flex-direction: column-reverse;}
+		&_right &__text{text-align: center;}
+		&_right &__img{margin-left: 0;}
 	}
 }

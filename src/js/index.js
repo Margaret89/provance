@@ -1,10 +1,15 @@
 import {$} from './common';
 
+var widthWindow = $(window).width();
+
+$(window).resize(function(){
+	widthWindow = $(window).width();
+});
+
 // Слайдер клиентов
 if($('.js-gallery-slider').length){
 	$('.js-gallery-slider').slick({
 		slidesToShow: 5,
-		// slidesToScroll: 5,
 		infinite: true,
 		centerMode: true,
 		centerPadding: '0px',
@@ -13,15 +18,16 @@ if($('.js-gallery-slider').length){
 		appendDots: $('.js-gallery-slider-dots'),
 		prevArrow: '<button id="prev" type="button" class="btn-slider btn-slider_left"><svg class="icon ic-arrow-left" width="40" height="35"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-slider btn-slider_right"><svg class="icon ic-arrow-right" width="40" height="35"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 768,
-		// 		settings: {
-		// 			slidesToShow: 1.5,
-		// 			slidesToScroll: 1,
-		// 		}
-		// 	},
-		// ]
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+					swipe: true,
+				}
+			},
+		]
 	});
 
 	$('.js-gallery-slider').find('.slick-slide.slick-active').each(function(indx, element){
@@ -47,6 +53,14 @@ if($('.js-partners-slider').length){
 		appendDots: $('.js-partners-slider-dots'),
 		prevArrow: '<button id="prev" type="button" class="btn-slider btn-slider_left"><svg class="icon ic-arrow-left" width="40" height="35"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-slider btn-slider_right"><svg class="icon ic-arrow-right" width="40" height="35"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					swipe: true,
+				}
+			},
+		]
 	});
 }
 
@@ -58,7 +72,33 @@ if($('.js-reviews-slider').length){
 		dots: true,
 		prevArrow: '<button id="prev" type="button" class="btn-slider btn-slider_left"><svg class="icon ic-arrow-left" width="40" height="35"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-left"></use></svg></button>',
 		nextArrow: '<button id="next" type="button" class="btn-slider btn-slider_right"><svg class="icon ic-arrow-right" width="40" height="35"><use xlink:href="assets/sprites/sprite.svg#ic-arrow-right"></use></svg></button>',
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					swipe: true,
+				}
+			},
+		]
 	});
+}
+
+// Слайдер персон
+if($('.js-people-list').length){
+	if(widthWindow < 768){
+		if(!$('.js-people-list').hasClass('.slick-initialized')){
+			$('.js-people-list').slick({
+				infinite: true,
+				dots: true,
+				arrows: false
+			});
+		}
+	}else{
+		if($('.js-people-list').hasClass('.slick-initialized')){
+			$('.js-people-list').slick('unslick');
+		}
+	}
+	
 }
 
 // Yandex карта

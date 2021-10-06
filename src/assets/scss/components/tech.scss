@@ -25,3 +25,18 @@
 		left: 0;
 	}
 }
+
+@media (max-width: 767px) {
+	.tech{
+		margin: 40px 0;
+
+		&__content{display: block;}
+
+		&__video,
+		&__desc{
+			width: auto;
+		}
+
+		&__video{margin-bottom: 30px;}
+	}
+}
